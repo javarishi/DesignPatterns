@@ -18,11 +18,11 @@ public class CompanyPrototype {
 	
 	public void loadCache(){
 		Walmart walmart = new Walmart();
-		walmart.setId("WalMart");
+		walmart.setId("retailer");
 		companyCache.put(walmart.getId(), walmart);
 		
 		DeltaAirlines delta = new DeltaAirlines();
-		delta.setId("Delta");
+		delta.setId("airline");
 		companyCache.put(delta.getId(), delta);
 		
 	}

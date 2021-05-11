@@ -6,19 +6,13 @@ public class PrototypeTest {
 		CompanyPrototype prototype = new CompanyPrototype();
 		prototype.loadCache();
 		
-		Walmart walmart = (Walmart) prototype.getCompany("WalMart");
-		walmart.complexLogicOfMakingCompany();
-		DeltaAirlines airline = (DeltaAirlines) prototype.getCompany("Delta");
-		airline.complexLogicOfMakingCompany();
+		Company bestBuy = (Company) prototype.getCompany("retailer").clone();
+		bestBuy.setId("BestBuy Inc."); // Change what's different
+		bestBuy.complexLogicOfMakingCompany(); // use what's same
 		
-		
-		Company bestBuy = (Company) walmart.clone();
-		bestBuy.setId("BestBuy Inc.");
-		bestBuy.complexLogicOfMakingCompany();
-		
-		Company americanAirline = (Company) airline.clone();
-		americanAirline.setId("american");
-		americanAirline.complexLogicOfMakingCompany();
+		Company americanAirline = (Company) prototype.getCompany("airline").clone();
+		americanAirline.setId("american"); // Change what's different
+		americanAirline.complexLogicOfMakingCompany(); // use what's same
 
 	}
 

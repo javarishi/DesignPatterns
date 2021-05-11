@@ -1,31 +1,24 @@
 package com.h2k.facade;
 
-import com.h2k.factory.Circle;
-import com.h2k.factory.Rectangle;
 import com.h2k.factory.Shape;
-import com.h2k.factory.Square;
+import com.h2k.factory.ShapeFactory;
 
 public class ShapeMakerFacade {
 	
-	 private Shape circle;
-	 private Shape rectangle;
-	 private Shape square;
+	 private  ShapeFactory factory = null;
 
    public ShapeMakerFacade() {
-      circle = new Circle();
-      rectangle = new Rectangle();
-      square = new Square();
+       factory = new ShapeFactory();
    }
 
    public void drawCircle(){
-      circle.draw();
-      
+	   factory.getShape(Shape.CIRCLE).draw();  
    }
    public void drawRectangle(){
-      rectangle.draw();
+	   factory.getShape(Shape.RECTANGLE).draw();
    }
    public void drawSquare(){
-      square.draw();
+	   factory.getShape(Shape.SQUARE).draw();
    }
 
 }

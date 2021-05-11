@@ -9,7 +9,7 @@ public class SingleObject {
 	   //class cannot be instantiated from other class
 	   private SingleObject(){
 		   System.out.println("This is Private Constructor");
-		   // Populate HashMap here
+		   // Populate HashMap here - this is for caching
 	   }
 
 	   //Get the only object available
